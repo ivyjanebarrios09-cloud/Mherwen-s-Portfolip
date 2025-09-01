@@ -25,7 +25,7 @@ export function Header() {
         <div className="mr-4 hidden md:flex">
           <Link href="/" className="mr-6 flex items-center space-x-2">
             <BookCopy className="h-6 w-6 text-primary" />
-            <span className="hidden font-bold sm:inline-block">DocuPort</span>
+            <span className="hidden font-bold sm:inline-block">Mherwen's Portfolio</span>
           </Link>
           <nav className="flex items-center space-x-6 text-sm font-medium">
             {navLinks.map((link) => (
@@ -47,7 +47,7 @@ export function Header() {
         <div className="flex flex-1 items-center justify-between md:hidden">
             <Link href="/" className="flex items-center space-x-2">
                 <BookCopy className="h-6 w-6 text-primary" />
-                <span className="font-bold">DocuPort</span>
+                <span className="font-bold">Mherwen's Portfolio</span>
             </Link>
             <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
             <SheetTrigger asChild>
@@ -60,7 +60,7 @@ export function Header() {
                 <div className="p-4">
                 <Link href="/" className="mb-8 flex items-center space-x-2">
                     <BookCopy className="h-6 w-6 text-primary" />
-                    <span className="font-bold">DocuPort</span>
+                    <span className="font-bold">Mherwen's Portfolio</span>
                 </Link>
                 <nav className="flex flex-col space-y-4">
                     {navLinks.map((link) => (

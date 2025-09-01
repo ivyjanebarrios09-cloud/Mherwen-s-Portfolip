@@ -3,7 +3,7 @@ import { ProjectCard } from '@/components/project-card';
 import type { Project } from '@/types';
 
 export const metadata: Metadata = {
-  title: 'Projects | DocuPort',
+  title: 'Projects | Mherwen\'s Portfolio',
   description: 'Welcome to my portfolio documentation viewer.',
 };
 

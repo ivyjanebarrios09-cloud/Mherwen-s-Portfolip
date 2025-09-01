@@ -4,7 +4,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 
 export const metadata: Metadata = {
-  title: 'About | DocuPort',
+  title: 'About | Mherwen\'s Portfolio',
   description: 'Learn more about me and my skills.',
 };
 
