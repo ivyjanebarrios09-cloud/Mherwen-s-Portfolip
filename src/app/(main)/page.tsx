@@ -37,7 +37,7 @@ const projects: Project[] = [
   {
     id: 'project-3',
     title: 'Portfolio Website',
-    description: 'A personal portfolio to showcase my skills and projects, built with Astro.',
+    description: 'A personal portfolio to showcase my skills and projects.',
     imageUrl: '/project showcase2.jpg',
     imageHint: 'personal website',
     link: 'https://example.com/project-3',
