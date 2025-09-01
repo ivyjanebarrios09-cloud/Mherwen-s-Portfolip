@@ -21,7 +21,7 @@ const projects: Project[] = [
   {
     id: 'project-1',
     title: 'E-commerce Platform',
-    description: 'A full-featured e-commerce website built with Next.js and Stripe.',
+    description: 'A personal portfolio to showcase my skills and projects.',
     imageUrl: '/Project showcase.jpg',
     imageHint: 'online store',
     link: 'https://example.com/project-1',
@@ -29,7 +29,7 @@ const projects: Project[] = [
   {
     id: 'project-2',
     title: 'Task Management App',
-    description: 'A collaborative task management tool for teams, using React and Firebase.',
+    description: 'A personal portfolio to showcase my skills and projects.',
     imageUrl: '/project showcase1.jpg',
     imageHint: 'task board',
     link: 'https://example.com/project-2',
@@ -45,7 +45,7 @@ const projects: Project[] = [
     {
     id: 'project-4',
     title: 'Recipe Finder',
-    description: 'Discover new recipes based on ingredients you have at home. Uses a public API.',
+    description: 'A personal portfolio to showcase my skills and projects.',
     imageUrl: '/project showsace3.jpeg',
     imageHint: 'food app',
     link: 'https://example.com/project-4',
