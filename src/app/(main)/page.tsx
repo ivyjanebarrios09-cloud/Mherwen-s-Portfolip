@@ -20,7 +20,7 @@ import type { Project } from '@/types';
 const projects: Project[] = [
   {
     id: 'project-1',
-    title: 'E-commerce Platform',
+    title: '',
     description: 'A personal portfolio to showcase my skills and projects.',
     imageUrl: '/Project showcase.jpg',
     imageHint: 'online store',
@@ -28,7 +28,7 @@ const projects: Project[] = [
   },
   {
     id: 'project-2',
-    title: 'Task Management App',
+    title: '',
     description: 'A personal portfolio to showcase my skills and projects.',
     imageUrl: '/project showcase1.jpg',
     imageHint: 'task board',
@@ -36,7 +36,7 @@ const projects: Project[] = [
   },
   {
     id: 'project-3',
-    title: 'Portfolio Website',
+    title: '',
     description: 'A personal portfolio to showcase my skills and projects.',
     imageUrl: '/project showcase2.jpg',
     imageHint: 'personal website',
@@ -44,7 +44,7 @@ const projects: Project[] = [
   },
     {
     id: 'project-4',
-    title: 'Recipe Finder',
+    title: '',
     description: 'A personal portfolio to showcase my skills and projects.',
     imageUrl: '/project showsace3.jpeg',
     imageHint: 'food app',
@@ -86,7 +86,7 @@ export default function HomePage() {
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                             <div className="absolute bottom-0 left-0 p-6">
-                                <h2 className="text-3xl font-bold text-white">{project.title}</h2>
+                                
                                 <p className="text-lg text-white/90 mt-2">{project.description}</p>
                             </div>
                         </CardContent>
