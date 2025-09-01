@@ -63,7 +63,7 @@ export default function ProjectsPage() {
     <div className="container mx-auto px-4 py-8">
       <section className="text-center py-16 md:py-24">
         <h1 className="font-headline text-4xl md:text-6xl font-bold tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-primary via-accent to-primary">
-          Jane Doe
+          Mherwen Wiel Romero
         </h1>
         <p className="mt-4 text-lg md:text-xl text-muted-foreground">
           Portfolio Documentation Viewer
