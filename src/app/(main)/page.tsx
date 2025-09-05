@@ -87,7 +87,7 @@ export default function HomePage() {
                 <div className="text-center md:text-left">
                 <h2 className="font-headline text-4xl md:text-5xl font-bold">About Me</h2>
                 <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
-                    Hello! I&apos;m a passionate full-stack developer with a love for creating beautiful, functional, and user-centric web applications. My journey in tech started with a curiosity for how things work, and it has evolved into a career where I get to build amazing digital experiences.
+                    Hello! I'm a passionate full-stack developer with a love for creating beautiful, functional, and user-centric web applications. My journey in tech started with a curiosity for how things work, and it has evolved into a career where I get to build amazing digital experiences.
                 </p>
                 <p className="mt-4 text-lg text-muted-foreground leading-relaxed">
                     This portfolio viewer is a collection of my work, showcasing various projects and the documentation behind them. I believe in clean code, thoughtful design, and continuous learning.

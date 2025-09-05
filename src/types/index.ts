@@ -116,14 +116,19 @@ export const projects: Project[] = [
   },
   {
     id: 'project-7',
-    title: 'Recipe Finder',
+    title: 'Lumi Track',
     description: 'A web app to discover new recipes based on ingredients you have.',
-    imageUrl: 'https://picsum.photos/600/400?random=7',
+    imageUrl: '/lumitrack.jpeg',
     imageHint: 'cooking recipe',
-    link: 'https://example.com/project-7',
+    link: 'lumitrack.atwebpages.com',
     documentation: {
       introduction: 'Find recipes easily.',
-      images: ['https://picsum.photos/800/600?random=7_1', 'https://picsum.photos/800/600?random=7_2'],
+      images: [
+        '/lumitrack1.jpeg',
+        '/lumitrack2.jpeg',
+        '/lumitrack3.jpeg'
+      
+      ]
     },
   },
   {
