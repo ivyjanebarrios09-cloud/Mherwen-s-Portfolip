@@ -28,22 +28,24 @@ const projects: Project[] = [
     documentation: {
         introduction: "Yucca is a modern e-commerce platform that demonstrates a complete shopping experience, from browsing products to completing a purchase with Stripe.",
         images: [
-          '/project showcase1.jpg',
-          '/project showcase2.jpg',
+          '/public/yuccamain.jpg',
+          '/public/yucca2.jpg',
+          '/public/yucca1.jpg',
+          '/public/yucca.jpg',
         ]
     }
   },
   {
     id: 'project-2',
-    title: 'Task Management App',
-    description: 'A collaborative task management tool for teams, using React and Firebase.',
-    imageUrl: '/project showcase1.jpg',
+    title: 'Wireless Scoreboard',
+    description: 'A wireless scoreboard project involves creating an electronic system where a controller wirelessly updates the game score and other data on a display, typically using an ESP32. The system includes a microcontroller, display screen, and power supply, offering flexibility and portability for various sports and events.',
+    imageUrl: '/public/Project showcase.jpg',
     imageHint: 'task board',
-    link: 'https://example.com/project-2',
+    link: 'NO LINK',
     documentation: {
-        introduction: "This is a comprehensive guide to the Task Management App, a tool designed for team collaboration.",
+        introduction: "A wireless scoreboard is an innovative system that allows real-time score updates and game data to be displayed without the need for physical wires. By utilizing wireless communication technologies like ESP32, the scoreboard can be controlled remotely, offering flexibility, portability, and ease of setup for various sports and events.",
         images: [
-          '/project showcase1.jpg',
+          '/public/wireless scoreboard.jpg',
         ]
     }
   },
