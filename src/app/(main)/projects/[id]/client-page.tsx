@@ -5,10 +5,18 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { ArrowUpRight, Link as LinkIcon } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { trackLinkClick } from '@/app/actions';
+
 
 export default function ProjectDocumentationClientPage({ project }: { project: Project }) {
   const isLinkAvailable = project.link !== 'NO LINK';
   const projectUrl = isLinkAvailable && !project.link.startsWith('http') ? `https://${project.link}` : project.link;
+
+  const handleLinkClick = () => {
+    if (isLinkAvailable) {
+      trackLinkClick(project.id);
+    }
+  };
 
   return (
     <div className="container mx-auto px-4 py-16">
@@ -20,6 +28,7 @@ export default function ProjectDocumentationClientPage({ project }: { project: P
               href={isLinkAvailable ? projectUrl : undefined} 
               target="_blank" 
               rel="noopener noreferrer" 
+              onClick={handleLinkClick}
               className={`flex items-center text-base transition-colors mb-4 ${
                 isLinkAvailable 
                   ? 'text-muted-foreground hover:text-primary' 
@@ -39,7 +48,7 @@ export default function ProjectDocumentationClientPage({ project }: { project: P
             </a>
             <CardDescription className="text-lg">{project.documentation.introduction}</CardDescription>
         </CardHeader>
-        <CardContent className="p-6">
+        <CardContent className="p-6 pt-0">
             {project.documentation.images && project.documentation.images.length > 0 && (
               <div className="mt-8">
                 <h3 className="text-2xl font-headline mb-4">Project Gallery</h3>
