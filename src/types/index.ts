@@ -75,10 +75,6 @@ export const projects: Project[] = [
             '/mawalasystem.jpeg',
             '/mawalasystem1.jpeg',
             '/mawalasystem2.jpeg',
-            '/'
-        
-
-    
         ]
     }
   },
@@ -117,16 +113,16 @@ export const projects: Project[] = [
   {
     id: 'project-7',
     title: 'Lumi Track',
-    description: 'A web app to discover new recipes based on ingredients you have.',
+    description: 'This platform uses artificial intelligence to learn user preferences, control lighting, heating, and appliances, and track energy consumption in real-time, helping reduce costs and improve efficiency.',
     imageUrl: '/lumitrack.jpeg',
     imageHint: 'cooking recipe',
     link: 'lumitrack.atwebpages.com',
     documentation: {
-      introduction: 'Find recipes easily.',
+      introduction: 'An AI-driven smart home platform enables remote control of home devices while optimizing energy usage through intelligent automation.',
       images: [
         '/lumitrack1.jpeg',
         '/lumitrack2.jpeg',
-        '/lumitrack3.jpeg'
+        '/lumitrack3.jpeg',
       
       ]
     },
