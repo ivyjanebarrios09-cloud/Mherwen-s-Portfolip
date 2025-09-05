@@ -28,7 +28,6 @@ const projects: Project[] = [
     documentation: {
         introduction: "Yucca is a modern e-commerce platform that demonstrates a complete shopping experience, from browsing products to completing a purchase with Stripe.",
         images: [
-          '/yuccamain.jpg',
           '/yucca2.jpg',
           '/yucca1.jpg',
           '/yucca.jpg',
@@ -51,22 +50,28 @@ const projects: Project[] = [
   },
   {
     id: 'project-3',
-    title: 'Portfolio Website',
-    description: 'A personal portfolio to showcase my skills and projects, built with Astro.',
-    imageUrl: '/project showcase2.jpg',
+    title: 'UV Cabinet',
+    description: 'A UV cabinet is a device that uses ultraviolet (UV) light to disinfect and sterilize items such as tools, equipment, or personal items. It effectively kills bacteria, viruses, and other pathogens, ensuring a hygienic environment without the use of chemicals.',
+    imageUrl: '/uvcabinet.jpg',
     imageHint: 'personal website',
-    link: 'https://example.com/project-3',
+    link: 'NO LINK',
     documentation: {
-        introduction: "This portfolio website is designed to showcase my skills and projects in a clean and organized manner.",
+        introduction: "A UV cabinet is a sanitation device that uses ultraviolet light to disinfect and sterilize objects, providing a chemical-free method to eliminate harmful pathogens. It's commonly used in healthcare, laboratories, and other settings where cleanliness and hygiene are critical.",
+        images: [
+            '/uvcabinet1.jpg',
+        ]
+            
+        
+
     }
   },
     {
     id: 'project-4',
-    title: 'Recipe Finder',
+    title: 'Mawala System',
     description: 'Discover new recipes based on ingredients you have at home. Uses a public API.',
     imageUrl: '/project showsace3.jpeg',
     imageHint: 'food app',
-    link: 'https://example.com/project-4',
+    link: 'mawalasystem.atwebpages.com',
     documentation: {
         introduction: "The Recipe Finder helps you discover new meals you can make with the ingredients you already have.",
     }
@@ -228,8 +233,7 @@ export default function HomePage() {
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                             <div className="absolute bottom-0 left-0 p-6">
-                                
-                                <p className="text-lg text-white/90 mt-2">{project.description}</p>
+                                <h3 className="text-2xl font-bold text-white">{project.title}</h3>
                             </div>
                         </CardContent>
                     </Card>

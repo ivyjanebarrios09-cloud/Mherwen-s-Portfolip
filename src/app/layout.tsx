@@ -4,7 +4,7 @@ import { Toaster } from '@/components/ui/toaster';
 
 export const metadata: Metadata = {
   title: 'Mherwen\'s Portfolio',
-  description: 'A portfolio to document your projects.',
+  description: 'A gallery of your project milestones.',
 };
 
 export default function RootLayout({
