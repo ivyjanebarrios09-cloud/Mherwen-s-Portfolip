@@ -8,6 +8,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { ArrowUpRight, Link as LinkIcon } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Skeleton } from '@/components/ui/skeleton';
 
 export default function ProjectDocumentationPage() {
@@ -55,8 +56,25 @@ export default function ProjectDocumentationPage() {
             <CardDescription className="text-lg">{project.documentation.introduction}</CardDescription>
         </CardHeader>
         <CardContent className="p-6">
-            {/* The step-by-step documentation has been removed as per your request. */}
-            {/* You can add any other content for the project documentation here. */}
+            {project.documentation.images && project.documentation.images.length > 0 && (
+              <div className="mt-8">
+                <h3 className="text-2xl font-headline mb-4">Project Gallery</h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  {project.documentation.images.map((img, index) => (
+                    <div key={index} className="relative aspect-video rounded-lg overflow-hidden border">
+                      <Image
+                        src={img}
+                        alt={`${project.title} - Screenshot ${index + 1}`}
+                        fill
+                        className="object-cover"
+                        sizes="(max-width: 768px) 100vw, 50vw"
+                        data-ai-hint="project screenshot"
+                      />
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
         </CardContent>
       </Card>
     </div>

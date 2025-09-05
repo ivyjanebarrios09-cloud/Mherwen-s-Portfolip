@@ -7,5 +7,6 @@ export interface Project {
   link: string;
   documentation: {
     introduction: string;
+    images?: string[];
   };
 }

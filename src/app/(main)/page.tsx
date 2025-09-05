@@ -27,6 +27,10 @@ const projects: Project[] = [
     link: 'yucca2.vercel.app',
     documentation: {
         introduction: "Yucca is a modern e-commerce platform that demonstrates a complete shopping experience, from browsing products to completing a purchase with Stripe.",
+        images: [
+          '/project showcase1.jpg',
+          '/project showcase2.jpg',
+        ]
     }
   },
   {
@@ -38,6 +42,9 @@ const projects: Project[] = [
     link: 'https://example.com/project-2',
     documentation: {
         introduction: "This is a comprehensive guide to the Task Management App, a tool designed for team collaboration.",
+        images: [
+          '/project showcase1.jpg',
+        ]
     }
   },
   {
