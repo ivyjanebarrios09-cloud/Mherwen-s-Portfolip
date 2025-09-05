@@ -152,7 +152,17 @@ const projects: Project[] = [
 ];
 
 const skills = {
-    "Languages": ["TypeScript", "JavaScript", "Python"],
+    "Languages": [
+        "HTML",
+        "CSS (Sass, Tailwind, Bootstrap)",
+        "JavaScript (Vanilla, TypeScript)",
+        "Java",
+        "C++",
+        "C#",
+        "PHP (Native)",
+        "Python",
+        "SQL"
+    ],
     "Frameworks and Library": ["React", "Next.js", "Node.js", "Tailwind CSS"],
     "Databases": ["Firebase", "PostgreSQL", "MongoDB"]
 };
