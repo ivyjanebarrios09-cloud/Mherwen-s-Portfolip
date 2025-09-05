@@ -31,18 +31,20 @@ import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { getProjectById } from '@/app/(main)/page';
 import type { Project } from '@/types';
-import { notFound } from 'next/navigation';
+import { notFound, useParams } from 'next/navigation';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { ArrowUpRight, Link as LinkIcon } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { Skeleton } from '@/components/ui/skeleton';
 
-export default function ProjectDocumentationPage({ params }: { params: { id: string } }) {
+export default function ProjectDocumentationPage() {
+  const params = useParams();
   const [project, setProject] = useState<Project | null | undefined>(undefined);
   
   useEffect(() => {
-    const fetchedProject = getProjectById(params.id);
+    const id = params.id as string;
+    const fetchedProject = getProjectById(id);
     setProject(fetchedProject ?? null);
   }, [params.id]);
 
