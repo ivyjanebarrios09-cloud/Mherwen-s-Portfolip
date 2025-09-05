@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState, use } from 'react';
+import { useEffect, useState } from 'react';
 import { getProjectById } from '@/app/(main)/page';
 import type { Project } from '@/types';
 import { notFound, useParams } from 'next/navigation';
@@ -12,13 +12,15 @@ import Image from 'next/image';
 import { Skeleton } from '@/components/ui/skeleton';
 
 export default function ProjectDocumentationPage() {
-  const params = use(useParams());
+  const params = useParams();
   const [project, setProject] = useState<Project | null | undefined>(undefined);
   
   useEffect(() => {
-    const id = params.id as string;
-    const fetchedProject = getProjectById(id);
-    setProject(fetchedProject ?? null);
+    if (params.id) {
+        const id = params.id as string;
+        const fetchedProject = getProjectById(id);
+        setProject(fetchedProject ?? null);
+    }
   }, [params.id]);
 
   if (project === undefined) {
