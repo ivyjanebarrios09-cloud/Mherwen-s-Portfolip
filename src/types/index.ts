@@ -1,3 +1,4 @@
+
 export interface Project {
   id: string;
   title: string;
@@ -74,6 +75,7 @@ export const projects: Project[] = [
             '/mawalasystem.jpeg',
             '/mawalasystem1.jpeg',
             '/mawalasystem2.jpeg',
+            '/'
         
 
     
@@ -84,7 +86,7 @@ export const projects: Project[] = [
     id: 'project-5',
     title: 'Smart PPE',
     description: 'Smart PPE includes sensors and wearables that monitor health, detect hazards, and provide alerts, helping to prevent accidents and improve safety in hazardous work environments.',
-    imageUrl: 'https://picsum.photos/600/400?random=5',
+    imageUrl: '/project showcase2.jpg',
     imageHint: 'weather forecast',
     link: 'smartppe.atwebpages.com',
     documentation: {
@@ -92,21 +94,24 @@ export const projects: Project[] = [
         images: [
           '/smartppe.jpg',
           '/smartppe1.jpg',
-          '/smartppe2.jpg',
           '/smartppe3.jpg',
-          '/smartppe4.jpg',
+          '/smartppe4.jpeg',
         ]
     }
   },
   {
     id: 'project-6',
-    title: 'Blog Platform',
-    description: 'A lightweight blogging platform with Markdown support and static site generation.',
-    imageUrl: 'https://picsum.photos/600/400?random=6',
+    title: 'Smart Eyeglasses',
+    description: 'These glasses feature built-in displays, cameras, and sensors, allowing users to access information, take photos, or navigate, all while keeping their hands free for other tasks.',
+    imageUrl: '/project showcase1.jpg',
     imageHint: 'writing blog',
-    link: 'https://example.com/project-6',
+    link: 'smarteyeglasses.atwebpages.com',
     documentation: {
-        introduction: "A guide to the blogging platform.",
+        introduction: "Smart eyeglasses are wearable devices that combine traditional eyewear with advanced technology to provide hands-free functionality.",
+        images: [
+          '/smarteyeglasses.jpg',
+          '/smarteyeglasses1.jpg',
+        ]
     }
   },
   {
