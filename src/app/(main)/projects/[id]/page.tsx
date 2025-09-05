@@ -1,4 +1,4 @@
-import { getProjectById, getProjects } from '@/app/(main)/page';
+import { getProjectById, getProjects } from '@/types';
 import { notFound } from 'next/navigation';
 import ProjectDocumentationClientPage from './client-page';
 import type { Metadata } from 'next';
