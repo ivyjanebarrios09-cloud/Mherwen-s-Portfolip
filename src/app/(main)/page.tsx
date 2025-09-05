@@ -174,8 +174,19 @@ const skills = {
         "Flutter",
         "Vite"
     ],
-    "Databases": ["Firebase", "PostgreSQL", "MongoDB"],
-    "Environments & Tools": []
+    "Databases": [
+        "MySQL",
+        "MariaDB",
+        "PostgreSQL",
+        "MongoDB",
+        "Firebase",
+        "Supabase"
+    ],
+    "Environments & Tools": [
+        "Node.js",
+        "Docker",
+        "MySQL Workbench"
+    ]
 };
 
 export default function HomePage() {
