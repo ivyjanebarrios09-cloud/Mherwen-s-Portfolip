@@ -36,38 +36,46 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { ArrowUpRight, Link as LinkIcon } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
+import { Skeleton } from '@/components/ui/skeleton';
 
 export default function ProjectDocumentationPage({ params }: { params: { id: string } }) {
-  const [project, setProject] = useState<Project | undefined>(undefined);
+  const [project, setProject] = useState<Project | null | undefined>(undefined);
   
   useEffect(() => {
     const fetchedProject = getProjectById(params.id);
-    if (fetchedProject) {
-        setProject(fetchedProject);
-    } else {
-        // Handle case where project is not found client-side
-        // This might be redundant if notFound() works as expected on server for initial render
-    }
+    setProject(fetchedProject ?? null);
   }, [params.id]);
 
-
-  if (!project) {
-    // This will be rendered on the server if the project is not found initially
-    // and on the client while the project is being fetched.
-    // To avoid flashing "not found" on the client, you could return a loading state.
-    // For this example, we'll keep it simple. If a project is not found after client-side check,
-    // we could redirect or show a 404 component.
-    // Using Next.js's notFound() is preferred for server-side rendering.
-    // However, since we fetch data on the client with useEffect, we need client-side handling.
-    if (typeof window !== 'undefined') {
-        // Return a loading or not found component for client-side
-        return <div>Loading...</div>; // Or a more sophisticated loading component
-    }
-    // This should be called on the server if the initial fetch fails.
-    // With client-side fetching, this line might not be reached as expected.
-    notFound();
+  if (project === undefined) {
+    return (
+        <div className="container mx-auto px-4 py-16">
+            <Card>
+                <CardHeader>
+                    <Skeleton className="h-8 w-1/2 mb-4" />
+                    <Skeleton className="h-6 w-1/3" />
+                </CardHeader>
+                <CardContent>
+                    <Skeleton className="h-4 w-full" />
+                    <Skeleton className="h-4 w-3/4 mt-2" />
+                    <div className="space-y-12 mt-12">
+                        <div className="grid md:grid-cols-2 gap-8 items-center">
+                            <div>
+                                <Skeleton className="h-8 w-1/3 mb-4" />
+                                <Skeleton className="h-4 w-full" />
+                                <Skeleton className="h-4 w-5/6 mt-2" />
+                            </div>
+                            <Skeleton className="aspect-video w-full" />
+                        </div>
+                    </div>
+                </CardContent>
+            </Card>
+        </div>
+    );
   }
 
+  if (project === null) {
+    notFound();
+  }
 
   return (
     <div className="container mx-auto px-4 py-16">
