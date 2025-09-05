@@ -209,8 +209,8 @@ export default function HomePage() {
             <div className="flex flex-col md:flex-row items-center md:items-start gap-12">
                 <div className="w-48 h-48 md:w-64 md:h-64 relative flex-shrink-0">
                 <Image
-                    src="https://picsum.photos/400/400"
-                    alt="Profile Picture"
+                    src="/about me.jpg"
+                    alt="Mherwen Wiel Romero"
                     width={256}
                     height={256}
                     className="rounded-full object-cover border-4 border-primary/50 shadow-lg"
