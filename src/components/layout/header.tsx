@@ -3,21 +3,50 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { BookCopy, Menu } from 'lucide-react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { cn } from '@/lib/utils';
 
 const navLinks = [
-  { href: '/', label: 'Home' },
-  { href: '/projects', label: 'Projects' },
-  { href: '/about', label: 'About' },
+  { href: '#home', label: 'Home' },
+  { href: '#projects', label: 'Projects' },
+  { href: '#about', label: 'About' },
 ];
 
 export function Header() {
   const pathname = usePathname();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [activeLink, setActiveLink] = useState('#home');
+
+  const handleScroll = () => {
+    const sections = navLinks.map(link => document.getElementById(link.href.substring(1)));
+    const scrollPosition = window.scrollY + 150;
+
+    sections.forEach(section => {
+      if (section && section.offsetTop <= scrollPosition && section.offsetTop + section.offsetHeight > scrollPosition) {
+        setActiveLink(`#${section.id}`);
+      }
+    });
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    if (pathname === '/') {
+        e.preventDefault();
+        const targetElement = document.getElementById(href.substring(1));
+        if (targetElement) {
+            targetElement.scrollIntoView({ behavior: 'smooth' });
+        }
+        setIsMobileMenuOpen(false);
+    }
+  };
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -32,9 +61,11 @@ export function Header() {
               <Link
                 key={link.href}
                 href={link.href}
+                onClick={(e) => handleNavClick(e, link.href)}
                 className={cn(
                   'transition-colors hover:text-foreground/80',
-                  pathname === link.href ? 'text-foreground' : 'text-foreground/60'
+                  pathname === '/' && activeLink === link.href ? 'text-foreground' : 'text-foreground/60',
+                  pathname !== '/' && pathname.startsWith(link.href.substring(1)) && 'text-foreground'
                 )}
               >
                 {link.label}
@@ -67,10 +98,10 @@ export function Header() {
                     <Link
                         key={link.href}
                         href={link.href}
-                        onClick={() => setIsMobileMenuOpen(false)}
+                        onClick={(e) => handleNavClick(e, link.href)}
                         className={cn(
                         'text-lg font-medium',
-                        pathname === link.href ? 'text-primary' : 'text-muted-foreground'
+                        activeLink === link.href ? 'text-primary' : 'text-muted-foreground'
                         )}
                     >
                         {link.label}
