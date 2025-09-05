@@ -151,7 +151,11 @@ const projects: Project[] = [
   },
 ];
 
-const skills = ['React', 'Next.js', 'TypeScript', 'Tailwind CSS', 'Firebase', 'Node.js', 'UI/UX Design'];
+const skills = {
+    "Languages": ["TypeScript", "JavaScript", "Python"],
+    "Frameworks and Library": ["React", "Next.js", "Node.js", "Tailwind CSS"],
+    "Databases": ["Firebase", "PostgreSQL", "MongoDB"]
+};
 
 export default function HomePage() {
   const plugin = React.useRef(
@@ -185,18 +189,25 @@ export default function HomePage() {
             </div>
             
             <div className="mt-20">
-                <h3 className="text-3xl font-headline font-bold text-center mb-8">My Skills</h3>
-                <Card className="bg-secondary/30 border-primary/20">
-                <CardContent className="p-6">
-                    <div className="flex flex-wrap justify-center gap-3">
-                    {skills.map((skill) => (
-                        <Badge key={skill} variant="outline" className="text-base px-4 py-2 bg-background border-primary/50 text-foreground hover:bg-primary/10 cursor-default">
-                        {skill}
-                        </Badge>
+                <h3 className="text-3xl font-headline font-bold text-center mb-12">My Skills</h3>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    {Object.entries(skills).map(([category, skillList]) => (
+                        <Card key={category} className="bg-secondary/30 border-primary/20">
+                            <CardHeader>
+                                <CardTitle className="text-xl font-semibold text-center">{category}</CardTitle>
+                            </CardHeader>
+                            <CardContent>
+                                <div className="flex flex-wrap justify-center gap-2">
+                                    {skillList.map((skill) => (
+                                        <Badge key={skill} variant="outline" className="text-sm px-3 py-1 bg-background border-primary/50 text-foreground hover:bg-primary/10 cursor-default">
+                                            {skill}
+                                        </Badge>
+                                    ))}
+                                </div>
+                            </CardContent>
+                        </Card>
                     ))}
-                    </div>
-                </CardContent>
-                </Card>
+                </div>
             </div>
         </div>
       </section>
