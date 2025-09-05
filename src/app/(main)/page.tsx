@@ -28,10 +28,10 @@ const projects: Project[] = [
     documentation: {
         introduction: "Yucca is a modern e-commerce platform that demonstrates a complete shopping experience, from browsing products to completing a purchase with Stripe.",
         images: [
-          '/public/yuccamain.jpg',
-          '/public/yucca2.jpg',
-          '/public/yucca1.jpg',
-          '/public/yucca.jpg',
+          '/yuccamain.jpg',
+          '/yucca2.jpg',
+          '/yucca1.jpg',
+          '/yucca.jpg',
         ]
     }
   },
@@ -39,13 +39,13 @@ const projects: Project[] = [
     id: 'project-2',
     title: 'Wireless Scoreboard',
     description: 'A wireless scoreboard project involves creating an electronic system where a controller wirelessly updates the game score and other data on a display, typically using an ESP32. The system includes a microcontroller, display screen, and power supply, offering flexibility and portability for various sports and events.',
-    imageUrl: '/public/Project showcase.jpg',
+    imageUrl: '/Project showcase.jpg',
     imageHint: 'task board',
     link: 'NO LINK',
     documentation: {
         introduction: "A wireless scoreboard is an innovative system that allows real-time score updates and game data to be displayed without the need for physical wires. By utilizing wireless communication technologies like ESP32, the scoreboard can be controlled remotely, offering flexibility, portability, and ease of setup for various sports and events.",
         images: [
-          '/public/wireless scoreboard.jpg',
+          '/wireless scoreboard.jpg',
         ]
     }
   },
