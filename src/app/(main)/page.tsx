@@ -24,6 +24,29 @@ const projects: Project[] = [
     imageUrl: '/yuccamain.jpg',
     imageHint: 'online store',
     link: 'yucca2.vercel.app',
+    documentation: {
+        introduction: "Yucca is a modern e-commerce platform that demonstrates a complete shopping experience, from browsing products to completing a purchase with Stripe.",
+        steps: [
+            {
+                title: "Step 1: Homepage and Product Discovery",
+                description: "The homepage features a curated selection of products. Users can easily navigate through categories and view featured items. The design is clean and focuses on high-quality product imagery.",
+                imageUrl: "/yuccamain.jpg",
+                imageHint: "e-commerce homepage"
+            },
+            {
+                title: "Step 2: Product Details Page",
+                description: "Clicking on a product leads to a detailed view with multiple images, description, price, and an 'Add to Cart' button. This page is designed to provide all necessary information to the user before making a purchase decision.",
+                imageUrl: "https://picsum.photos/800/600?random=11",
+                imageHint: "product details"
+            },
+            {
+                title: "Step 3: Shopping Cart and Checkout",
+                description: "The shopping cart allows users to review their selected items, update quantities, and proceed to checkout. The checkout process is streamlined and secure, powered by Stripe.",
+                imageUrl: "https://picsum.photos/800/600?random=12",
+                imageHint: "shopping cart"
+            }
+        ]
+    }
   },
   {
     id: 'project-2',
@@ -32,6 +55,23 @@ const projects: Project[] = [
     imageUrl: '/project showcase1.jpg',
     imageHint: 'task board',
     link: 'https://example.com/project-2',
+    documentation: {
+        introduction: "This is a comprehensive guide to the Task Management App, a tool designed for team collaboration.",
+        steps: [
+            {
+                title: "Step 1: Dashboard",
+                description: "The main dashboard gives you an overview of all your tasks, categorized by status (To Do, In Progress, Done).",
+                imageUrl: "/project showcase1.jpg",
+                imageHint: "task dashboard"
+            },
+            {
+                title: "Step 2: Creating a New Task",
+                description: "You can easily create a new task by clicking the 'Add Task' button. A modal will appear where you can enter the task details.",
+                imageUrl: "https://picsum.photos/800/600?random=22",
+                imageHint: "add new task"
+            }
+        ]
+    }
   },
   {
     id: 'project-3',
@@ -40,6 +80,17 @@ const projects: Project[] = [
     imageUrl: '/project showcase2.jpg',
     imageHint: 'personal website',
     link: 'https://example.com/project-3',
+    documentation: {
+        introduction: "This portfolio website is designed to showcase my skills and projects in a clean and organized manner.",
+        steps: [
+            {
+                title: "Step 1: The Landing Page",
+                description: "The landing page provides a brief introduction and highlights key projects.",
+                imageUrl: "/project showcase2.jpg",
+                imageHint: "portfolio landing page"
+            }
+        ]
+    }
   },
     {
     id: 'project-4',
@@ -48,6 +99,17 @@ const projects: Project[] = [
     imageUrl: '/project showsace3.jpeg',
     imageHint: 'food app',
     link: 'https://example.com/project-4',
+    documentation: {
+        introduction: "The Recipe Finder helps you discover new meals you can make with the ingredients you already have.",
+        steps: [
+            {
+                title: "Step 1: Search for Recipes",
+                description: "Enter the ingredients you have on hand, and the app will fetch recipes you can make.",
+                imageUrl: "/project showsace3.jpeg",
+                imageHint: "recipe search"
+            }
+        ]
+    }
   },
   {
     id: 'project-5',
@@ -56,6 +118,17 @@ const projects: Project[] = [
     imageUrl: 'https://picsum.photos/600/400?random=5',
     imageHint: 'weather forecast',
     link: 'https://example.com/project-5',
+    documentation: {
+        introduction: "A simple yet powerful weather dashboard.",
+        steps: [
+            {
+                title: "Step 1: Check the Weather",
+                description: "Enter a city to see the current weather and a 5-day forecast.",
+                imageUrl: "https://picsum.photos/800/600?random=51",
+                imageHint: "weather dashboard"
+            }
+        ]
+    }
   },
   {
     id: 'project-6',
@@ -64,6 +137,17 @@ const projects: Project[] = [
     imageUrl: 'https://picsum.photos/600/400?random=6',
     imageHint: 'writing blog',
     link: 'https://example.com/project-6',
+    documentation: {
+        introduction: "A guide to the blogging platform.",
+        steps: [
+            {
+                title: "Step 1: Reading an Article",
+                description: "The main view for reading a blog post.",
+                imageUrl: "https://picsum.photos/800/600?random=61",
+                imageHint: "blog post"
+            }
+        ]
+    }
   },
 ];
 
@@ -177,4 +261,10 @@ export default function HomePage() {
       </section>
     </div>
   );
+}
+
+export const getProjects = () => projects;
+
+export const getProjectById = (id: string) => {
+    return projects.find(p => p.id === id);
 }
