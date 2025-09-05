@@ -90,7 +90,6 @@ export const projects: Project[] = [
         images: [
           '/smartppe.jpg',
           '/smartppe1.jpg',
-          '/smartppe3.jpg',
           '/smartppe4.jpeg',
         ]
     }
