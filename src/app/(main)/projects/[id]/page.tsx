@@ -43,6 +43,9 @@ export default function ProjectDocumentationPage() {
   if (project === null) {
     notFound();
   }
+  
+  const isLinkAvailable = project.link !== 'NO LINK';
+  const projectUrl = isLinkAvailable && !project.link.startsWith('http') ? `https://${project.link}` : project.link;
 
   return (
     <div className="container mx-auto px-4 py-16">
@@ -50,10 +53,26 @@ export default function ProjectDocumentationPage() {
         <CardHeader className="p-6">
             <Link href="/" className="text-sm text-primary hover:underline mb-4">&larr; Back to all projects</Link>
             <CardTitle className="text-4xl font-headline mb-2">{project.title}</CardTitle>
-            <a href={project.link} target="_blank" rel="noopener noreferrer" className="flex items-center text-base text-muted-foreground hover:text-primary transition-colors mb-4">
+            <a 
+              href={isLinkAvailable ? projectUrl : undefined} 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className={`flex items-center text-base transition-colors mb-4 ${
+                isLinkAvailable 
+                  ? 'text-muted-foreground hover:text-primary' 
+                  : 'text-muted-foreground cursor-not-allowed'
+              }`}
+              aria-disabled={!isLinkAvailable}
+            >
                 <LinkIcon className="mr-2 h-4 w-4" />
-                <span>{project.link.replace('https://', '').replace('http://', '')}</span>
-                <ArrowUpRight className="ml-1 h-4 w-4" />
+                {isLinkAvailable ? (
+                  <>
+                    <span>{project.link.replace(/^(https?:\/\/)?(www\.)?/, '')}</span>
+                    <ArrowUpRight className="ml-1 h-4 w-4" />
+                  </>
+                ) : (
+                  <span>Link not available</span>
+                )}
             </a>
             <CardDescription className="text-lg">{project.documentation.introduction}</CardDescription>
         </CardHeader>

@@ -68,12 +68,21 @@ const projects: Project[] = [
     {
     id: 'project-4',
     title: 'Mawala System',
-    description: 'Discover new recipes based on ingredients you have at home. Uses a public API.',
+    description: 'A dynamic flood control system is an adaptive infrastructure designed to manage and mitigate flood risks by adjusting in real-time to changing water levels and environmental conditions. It uses sensors, smart technology, and automated barriers to efficiently regulate water flow and prevent flooding, offering a flexible and responsive solution.',
     imageUrl: '/project showsace3.jpeg',
     imageHint: 'food app',
     link: 'mawalasystem.atwebpages.com',
     documentation: {
-        introduction: "The Recipe Finder helps you discover new meals you can make with the ingredients you already have.",
+        introduction: "A dynamic flood control system is an advanced solution that uses real-time data and automated technology to manage flood risks. By adjusting to changing conditions, it helps protect areas from flooding, ensuring more effective and responsive water management.",
+
+        images: [
+            '/mawalasystem.jpeg',
+            '/mawalasystem1.jpeg',
+            '/mawalasystem2.jpeg',
+        
+
+    
+        ]
     }
   },
   {
