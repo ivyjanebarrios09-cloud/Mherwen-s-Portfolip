@@ -163,7 +163,17 @@ const skills = {
         "Python",
         "SQL"
     ],
-    "Frameworks and Library": ["React", "Next.js", "Node.js", "Tailwind CSS"],
+    "Frameworks and Library": [
+        "React.js",
+        "Next.js",
+        "Express.js",
+        "Laravel",
+        ".NET",
+        "ASP",
+        "Flask",
+        "Flutter",
+        "Vite"
+    ],
     "Databases": ["Firebase", "PostgreSQL", "MongoDB"]
 };
 
