@@ -3,6 +3,7 @@
 import * as React from 'react';
 import Autoplay from 'embla-carousel-autoplay';
 import Image from 'next/image';
+import { Code2, Library, Database, Wrench } from 'lucide-react';
 
 import {
   Carousel,
@@ -189,6 +190,13 @@ const skills = {
     ]
 };
 
+const skillIcons: { [key: string]: React.ElementType } = {
+    "Languages": Code2,
+    "Frameworks and Library": Library,
+    "Databases": Database,
+    "Environments & Tools": Wrench
+};
+
 export default function HomePage() {
   const plugin = React.useRef(
     Autoplay({ delay: 2000, stopOnInteraction: true })
@@ -223,22 +231,28 @@ export default function HomePage() {
             <div className="mt-20">
                 <h3 className="text-3xl font-headline font-bold text-center mb-12">My Skills</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    {Object.entries(skills).map(([category, skillList]) => (
-                        <Card key={category} className="bg-secondary/30 border-primary/20">
-                            <CardHeader>
-                                <CardTitle className="text-xl font-semibold text-center">{category}</CardTitle>
-                            </CardHeader>
-                            <CardContent>
-                                <div className="flex flex-wrap justify-center gap-2">
-                                    {skillList.map((skill) => (
-                                        <Badge key={skill} variant="outline" className="text-sm px-3 py-1 bg-background border-primary/50 text-foreground hover:bg-primary/10 cursor-default">
-                                            {skill}
-                                        </Badge>
-                                    ))}
-                                </div>
-                            </CardContent>
-                        </Card>
-                    ))}
+                    {Object.entries(skills).map(([category, skillList]) => {
+                        const Icon = skillIcons[category];
+                        return (
+                            <Card key={category} className="bg-secondary/30 border-primary/20">
+                                <CardHeader>
+                                    <CardTitle className="text-xl font-semibold text-center flex items-center justify-center gap-2">
+                                        {Icon && <Icon className="w-6 h-6" />}
+                                        <span>{category}</span>
+                                    </CardTitle>
+                                </CardHeader>
+                                <CardContent>
+                                    <div className="flex flex-wrap justify-center gap-2">
+                                        {skillList.map((skill) => (
+                                            <Badge key={skill} variant="outline" className="text-sm px-3 py-1 bg-background border-primary/50 text-foreground hover:bg-primary/10 cursor-default">
+                                                {skill}
+                                            </Badge>
+                                        ))}
+                                    </div>
+                                </CardContent>
+                            </Card>
+                        );
+                    })}
                 </div>
             </div>
         </div>
