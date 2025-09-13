@@ -74,12 +74,12 @@ export default function HomePage() {
       <section id="about" className="py-16">
         <div className="container mx-auto max-w-4xl px-4">
             <div className="flex flex-col md:flex-row items-center md:items-start gap-12">
-                <div className="w-48 h-48 md:w-64 md:h-64 relative flex-shrink-0">
+                <div className="w-64 h-64 md:w-80 md:h-80 relative flex-shrink-0">
                 <Image
                     src="/about me.jpg"
                     alt="Mherwen Wiel Romero"
-                    width={256}
-                    height={256}
+                    width={320}
+                    height={320}
                     className="rounded-full object-cover border-4 border-primary/50 shadow-lg"
                     data-ai-hint="professional portrait"
                 />
