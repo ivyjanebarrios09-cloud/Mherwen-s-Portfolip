@@ -242,7 +242,7 @@ export const projects: Project[] = [
     description: 'Secure storage unit designed to safely contain and manage biological waste to prevent contamination and ensure proper disposal.',
     imageUrl: '/biowaste.jpeg',
     imageHint: 'bio waste',
-    link: '',
+    link: 'NO LINK',
     documentation: {
       introduction: 'Secure storage unit designed to safely contain and manage biological waste to prevent contamination and ensure proper disposal.',
       images: ['/biowaste1.jpeg'],
