@@ -51,10 +51,10 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-14 items-center">
+      <div className="container flex h-16 items-center">
         <div className="mr-4 hidden md:flex">
           <Link href="/" className="mr-6 flex items-center space-x-2">
-            <Image src="/icon.jpg" alt="Logo" width={24} height={24} className="rounded-full" />
+            <Image src="/icon.jpg" alt="Logo" width={32} height={32} className="rounded-full" />
             <span className="hidden font-bold sm:inline-block">Mherwen's Portfolio</span>
           </Link>
           <nav className="flex items-center space-x-6 text-sm font-medium">
@@ -78,7 +78,7 @@ export function Header() {
         {/* Mobile Nav */}
         <div className="flex flex-1 items-center justify-between md:hidden">
             <Link href="/" className="flex items-center space-x-2">
-                <Image src="/icon.jpg" alt="Logo" width={24} height={24} className="rounded-full" />
+                <Image src="/icon.jpg" alt="Logo" width={32} height={32} className="rounded-full" />
                 <span className="font-bold">Mherwen's Portfolio</span>
             </Link>
             <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
@@ -91,7 +91,7 @@ export function Header() {
             <SheetContent side="left">
                 <div className="p-4">
                 <Link href="/" className="mb-8 flex items-center space-x-2">
-                    <Image src="/icon.jpg" alt="Logo" width={24} height={24} className="rounded-full" />
+                    <Image src="/icon.jpg" alt="Logo" width={32} height={32} className="rounded-full" />
                     <span className="font-bold">Mherwen's Portfolio</span>
                 </Link>
                 <nav className="flex flex-col space-y-4">
