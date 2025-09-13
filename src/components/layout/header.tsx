@@ -2,8 +2,9 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { BookCopy, Menu } from 'lucide-react';
+import { Menu } from 'lucide-react';
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
@@ -53,7 +54,7 @@ export function Header() {
       <div className="container flex h-14 items-center">
         <div className="mr-4 hidden md:flex">
           <Link href="/" className="mr-6 flex items-center space-x-2">
-            <BookCopy className="h-6 w-6 text-primary" />
+            <Image src="/icon.jpg" alt="Logo" width={24} height={24} className="rounded-full" />
             <span className="hidden font-bold sm:inline-block">Mherwen's Portfolio</span>
           </Link>
           <nav className="flex items-center space-x-6 text-sm font-medium">
@@ -77,7 +78,7 @@ export function Header() {
         {/* Mobile Nav */}
         <div className="flex flex-1 items-center justify-between md:hidden">
             <Link href="/" className="flex items-center space-x-2">
-                <BookCopy className="h-6 w-6 text-primary" />
+                <Image src="/icon.jpg" alt="Logo" width={24} height={24} className="rounded-full" />
                 <span className="font-bold">Mherwen's Portfolio</span>
             </Link>
             <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
@@ -90,7 +91,7 @@ export function Header() {
             <SheetContent side="left">
                 <div className="p-4">
                 <Link href="/" className="mb-8 flex items-center space-x-2">
-                    <BookCopy className="h-6 w-6 text-primary" />
+                    <Image src="/icon.jpg" alt="Logo" width={24} height={24} className="rounded-full" />
                     <span className="font-bold">Mherwen's Portfolio</span>
                 </Link>
                 <nav className="flex flex-col space-y-4">
