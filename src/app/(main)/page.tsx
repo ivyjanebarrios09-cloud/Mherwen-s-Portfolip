@@ -141,7 +141,7 @@ export default function HomePage() {
                 <CarouselItem key={project.id}>
                 <div className="p-1">
                     <Card className="overflow-hidden">
-                        <CardContent className="p-0 relative aspect-video">
+                        <CardContent className="p-0 relative aspect-[4/3]">
                              <Image
                                 src={project.imageUrl}
                                 alt={project.title}
