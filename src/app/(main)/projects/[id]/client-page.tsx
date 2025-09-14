@@ -54,7 +54,7 @@ export default function ProjectDocumentationClientPage({ project }: { project: P
                 <h3 className="text-2xl font-headline mb-4">Project Gallery</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   {project.documentation.images.map((img, index) => (
-                    <div key={index} className="relative aspect-video rounded-lg overflow-hidden border">
+                    <div key={index} className="relative aspect-[4/3] rounded-lg overflow-hidden border">
                       <Image
                         src={img}
                         alt={`${project.title} - Screenshot ${index + 1}`}
