@@ -1,3 +1,4 @@
+
 'use client';
 
 import type { Project } from '@/types';
@@ -6,6 +7,8 @@ import { ArrowUpRight, Link as LinkIcon } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { trackLinkClick } from '@/app/actions';
+import { SlideUp } from '@/components/animations/slide-up';
+import { ScaleIn } from '@/components/animations/scale-in';
 
 
 export default function ProjectDocumentationClientPage({ project }: { project: Project }) {
@@ -22,8 +25,13 @@ export default function ProjectDocumentationClientPage({ project }: { project: P
     <div className="container mx-auto px-4 py-16">
       <Card className="overflow-hidden">
         <CardHeader className="p-6">
+          <SlideUp>
             <Link href="/" className="text-sm text-primary hover:underline mb-4">&larr; Back to all projects</Link>
+          </SlideUp>
+          <SlideUp delay={0.1}>
             <CardTitle className="text-3xl md:text-4xl font-headline mb-2">{project.title}</CardTitle>
+          </SlideUp>
+          <SlideUp delay={0.2}>
             <a 
               href={isLinkAvailable ? projectUrl : undefined} 
               target="_blank" 
@@ -46,24 +54,31 @@ export default function ProjectDocumentationClientPage({ project }: { project: P
                   <span>Link not available</span>
                 )}
             </a>
+          </SlideUp>
+          <SlideUp delay={0.3}>
             <CardDescription className="text-lg">{project.documentation.introduction}</CardDescription>
+          </SlideUp>
         </CardHeader>
         <CardContent className="p-6 pt-0">
             {project.documentation.images && project.documentation.images.length > 0 && (
               <div className="mt-8">
-                <h3 className="text-2xl font-headline mb-4">Project Gallery</h3>
+                <SlideUp>
+                  <h3 className="text-2xl font-headline mb-4">Project Gallery</h3>
+                </SlideUp>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   {project.documentation.images.map((img, index) => (
-                    <div key={index} className="relative aspect-[4/3] rounded-lg overflow-hidden border">
-                      <Image
-                        src={img}
-                        alt={`${project.title} - Screenshot ${index + 1}`}
-                        fill
-                        className="object-cover"
-                        sizes="(max-width: 768px) 100vw, 50vw"
-                        data-ai-hint="project screenshot"
-                      />
-                    </div>
+                    <ScaleIn key={index} delay={index * 0.1}>
+                      <div className="relative aspect-[4/3] rounded-lg overflow-hidden border">
+                        <Image
+                          src={img}
+                          alt={`${project.title} - Screenshot ${index + 1}`}
+                          fill
+                          className="object-cover"
+                          sizes="(max-width: 768px) 100vw, 50vw"
+                          data-ai-hint="project screenshot"
+                        />
+                      </div>
+                    </ScaleIn>
                   ))}
                 </div>
               </div>
