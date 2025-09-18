@@ -23,7 +23,7 @@ export default function ProjectDocumentationClientPage({ project }: { project: P
       <Card className="overflow-hidden">
         <CardHeader className="p-6">
             <Link href="/" className="text-sm text-primary hover:underline mb-4">&larr; Back to all projects</Link>
-            <CardTitle className="text-4xl font-headline mb-2">{project.title}</CardTitle>
+            <CardTitle className="text-3xl md:text-4xl font-headline mb-2">{project.title}</CardTitle>
             <a 
               href={isLinkAvailable ? projectUrl : undefined} 
               target="_blank" 
@@ -36,11 +36,11 @@ export default function ProjectDocumentationClientPage({ project }: { project: P
               }`}
               aria-disabled={!isLinkAvailable}
             >
-                <LinkIcon className="mr-2 h-4 w-4" />
+                <LinkIcon className="mr-2 h-4 w-4 flex-shrink-0" />
                 {isLinkAvailable ? (
                   <>
-                    <span>{project.link.replace(/^(https?:\/\/)?(www\.)?/, '')}</span>
-                    <ArrowUpRight className="ml-1 h-4 w-4" />
+                    <span className="truncate">{project.link.replace(/^(https?:\/\/)?(www\.)?/, '')}</span>
+                    <ArrowUpRight className="ml-1 h-4 w-4 flex-shrink-0" />
                   </>
                 ) : (
                   <span>Link not available</span>

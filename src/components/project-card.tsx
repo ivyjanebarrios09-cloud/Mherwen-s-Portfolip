@@ -62,7 +62,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
             }`}
             aria-disabled={!isLinkAvailable}
           >
-            <LinkIcon className="mr-2 h-4 w-4" />
+            <LinkIcon className="mr-2 h-4 w-4 flex-shrink-0" />
             {isLinkAvailable ? (
               <span className="truncate">{project.link.replace(/^(https?:\/\/)?(www\.)?/, '')}</span>
             ) : (

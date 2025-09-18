@@ -70,7 +70,7 @@ export default function HomePage() {
   );
 
   return (
-    <div>
+    <div className="overflow-x-hidden">
       <section id="about" className="py-16">
         <div className="container mx-auto max-w-4xl px-4">
             <div className="flex flex-col md:flex-row items-center md:items-start gap-12">
@@ -160,8 +160,10 @@ export default function HomePage() {
                 </CarouselItem>
             ))}
             </CarouselContent>
-            <CarouselPrevious />
-            <CarouselNext />
+            <div className="hidden md:block">
+              <CarouselPrevious />
+              <CarouselNext />
+            </div>
         </Carousel>
       </section>
 
