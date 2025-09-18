@@ -9,6 +9,7 @@ import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { cn } from '@/lib/utils';
+import { ThemeToggle } from '@/components/theme-toggle';
 
 const navLinks = [
   { href: '#about', label: 'About' },
@@ -52,7 +53,7 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center">
-        <div className="mr-4 hidden md:flex">
+        <div className="mr-4 hidden md:flex flex-1 items-center">
           <Link href="/" className="mr-6 flex items-center space-x-2">
             <Image src="/icon.jpg" alt="Logo" width={32} height={32} className="rounded-full" />
             <span className="hidden font-bold sm:inline-block">Mherwen's Portfolio</span>
@@ -73,6 +74,9 @@ export function Header() {
               </Link>
             ))}
           </nav>
+          <div className="flex flex-1 items-center justify-end">
+            <ThemeToggle />
+          </div>
         </div>
 
         {/* Mobile Nav */}
@@ -81,37 +85,40 @@ export function Header() {
                 <Image src="/icon.jpg" alt="Logo" width={32} height={32} className="rounded-full" />
                 <span className="font-bold">Mherwen's Portfolio</span>
             </Link>
-            <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
-            <SheetTrigger asChild>
-                <Button variant="ghost" size="icon">
-                <Menu className="h-5 w-5" />
-                <span className="sr-only">Toggle Menu</span>
-                </Button>
-            </SheetTrigger>
-            <SheetContent side="left">
-                <div className="p-4">
-                <Link href="/" className="mb-8 flex items-center space-x-2">
-                    <Image src="/icon.jpg" alt="Logo" width={32} height={32} className="rounded-full" />
-                    <span className="font-bold">Mherwen's Portfolio</span>
-                </Link>
-                <nav className="flex flex-col space-y-4">
-                    {navLinks.map((link) => (
-                    <Link
-                        key={link.href}
-                        href={link.href}
-                        onClick={(e) => handleNavClick(e, link.href)}
-                        className={cn(
-                        'text-lg font-medium',
-                        activeLink === link.href ? 'text-primary' : 'text-muted-foreground'
-                        )}
-                    >
-                        {link.label}
+            <div className="flex items-center gap-2">
+                <ThemeToggle />
+                <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
+                <SheetTrigger asChild>
+                    <Button variant="ghost" size="icon">
+                    <Menu className="h-5 w-5" />
+                    <span className="sr-only">Toggle Menu</span>
+                    </Button>
+                </SheetTrigger>
+                <SheetContent side="left">
+                    <div className="p-4">
+                    <Link href="/" className="mb-8 flex items-center space-x-2">
+                        <Image src="/icon.jpg" alt="Logo" width={32} height={32} className="rounded-full" />
+                        <span className="font-bold">Mherwen's Portfolio</span>
                     </Link>
-                    ))}
-                </nav>
-                </div>
-            </SheetContent>
-            </Sheet>
+                    <nav className="flex flex-col space-y-4">
+                        {navLinks.map((link) => (
+                        <Link
+                            key={link.href}
+                            href={link.href}
+                            onClick={(e) => handleNavClick(e, link.href)}
+                            className={cn(
+                            'text-lg font-medium',
+                            activeLink === link.href ? 'text-primary' : 'text-muted-foreground'
+                            )}
+                        >
+                            {link.label}
+                        </Link>
+                        ))}
+                    </nav>
+                    </div>
+                </SheetContent>
+                </Sheet>
+            </div>
         </div>
       </div>
     </header>
