@@ -130,7 +130,7 @@ export const projects: Project[] = [
     id: 'project-8',
     title: 'Know Your Food Pal',
     description: 'A user-friendly app that helps you understand the nutritional content and health impact of the foods you eat.',
-    imageUrl: '/knowyourfoodpal.jpeg',
+    imageUrl: '/knowyourfoodpal.jpg',
     imageHint: 'food pal',
     link: 'know-your-food-opal.vercel.app',
     documentation: {
