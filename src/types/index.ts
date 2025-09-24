@@ -154,7 +154,7 @@ export const projects: Project[] = [
   },
   {
     id: 'project-10',
-    title: 'Personal Finance Manager',
+    title: 'Glucose Tracking',
     description: 'A smart monitoring tool that helps users easily track and manage their blood glucose levels in real time.',
     imageUrl: '/gluco.jpg',
     imageHint: 'glucose track',
