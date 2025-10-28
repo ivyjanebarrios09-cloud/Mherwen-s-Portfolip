@@ -230,7 +230,7 @@ export const projects: Project[] = [
     description: 'For All Recruitment Needs',
     imageUrl: '/calcu.jpg',
     imageHint: 'calcu consulting',
-    link: 'calcu-consulting.vercel.com',
+    link: 'calcu-consulting.vercel.app',
     documentation: {
       introduction: 'For All Recruitment Needs',
       images: ['/calcu1.jpg'],
