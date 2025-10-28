@@ -277,30 +277,33 @@ export const projects: Project[] = [
               '/aqua5.jpg'],
     },
   },
-  // {
-  //   id: 'project-19',
-  //   title: 'Appointment Booking System',
-  //   description: 'A system for scheduling and managing appointments.',
-  //   imageUrl: 'https://picsum.photos/600/400?random=19',
-  //   imageHint: 'calendar appointment',
-  //   link: 'https://example.com/project-19',
-  //   documentation: {
-  //     introduction: 'Effortless appointment scheduling.',
-  //     images: ['https://picsum.photos/800/600?random=19_1', 'https://picsum.photos/800/600?random=19_2'],
-  //   },
-  // },
-  // {
-  //   id: 'project-20',
-  //   title: 'Event Management Platform',
-  //   description: 'Plan, promote, and manage events of all sizes.',
-  //   imageUrl: 'https://picsum.photos/600/400?random=20',
-  //   imageHint: 'event management',
-  //   link: 'https://example.com/project-20',
-  //   documentation: {
-  //     introduction: 'The ultimate tool for event organizers.',
-  //     images: ['https://picsum.photos/800/600?random=20_1', 'https://picsum.photos/800/600?random=20_2'],
-  //   },
-  // },
+  {
+    id: 'project-19',
+    title: 'Aquamate',
+    description: 'Smart setup that continuously checks the condition of water to make sure it’s clean and safe.',
+    imageUrl: '/aquamate.jpg',
+    imageHint: 'calendar appointment',
+    link: 'aqua-mate.vercel.app',
+    documentation: {
+      introduction: 'Tracks and analyzes the condition of water in real time. It measures key parameters such as pH level, ammonia, and temperature to ensure the water remains safe and balanced. This system helps detect changes early, protecting both the environment and aquatic life.',
+      images: ['/aquamate1.jpg',
+         '/aquamate2.jpg',
+         '/aquamate3.jpg'],
+    },
+  },
+  {
+    id: 'project-20',
+    title: 'Petpal Feeder',
+    description: 'The smart, simple and stylish way to keep your furry friends fed and happy. Never worry about mealtime again!',
+    imageUrl: '/petpal.jpg',
+    imageHint: 'event management',
+    link: 'pet-pal-feeder.vercel.app',
+    documentation: {
+      introduction: 'The **Smart Pet Feeder** is a modern and easy-to-use device that keeps your furry friends fed and happy. It automatically dispenses food on schedule, ensuring your pet never misses a meal. With its sleek design and smart features, it makes pet care simple and worry-free.',
+      images: ['/petpal1.jpg',
+         '/petpal2.jpg','/petpal3.jpg','/petpal4.jpg',],
+    },
+  },
 ];
 
 
